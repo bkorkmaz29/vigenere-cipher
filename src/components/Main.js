@@ -1,6 +1,5 @@
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
-import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Buttons from './Buttons';
 
@@ -13,42 +12,41 @@ function Main() {
     const [toggle, setToggle] = useState(true)
 
     const handleEncrypt = () => {
-        let cipher_text="";
-        if(keyword.length<2)
+        let encryptedText="";
+        if(keyword.length < 2)
           return alert("Keyword needs to be at least 2 characters long")
       
         for (let i = 0; i < input.length; i++)
         {
     
-            let x = (input[i].charCodeAt(0) + key[i].charCodeAt(0)) %26;
+            let x = (input[i].charCodeAt(0) + key[i].charCodeAt(0)) % 26;
       
             x += 'A'.charCodeAt(0);
       
-            cipher_text+=String.fromCharCode(x);
+            encryptedText+=String.fromCharCode(x);
         }
-        setInput(cipher_text);
+        setInput(encryptedText);
         setToggle(false)
       }
     
       const handleDecrypt = () => {
-        let orig_text = "";
+        let inputText = "";
       
         for (let i = 0 ; i < input.length ; i++)
         {
-            let x = (input[i].charCodeAt(0) -
-                        key[i].charCodeAt(0) + 26) %26;
+            let x = (input[i].charCodeAt(0) - key[i].charCodeAt(0) + 26) % 26;
       
             x += 'A'.charCodeAt(0);
-            orig_text+=String.fromCharCode(x);
+            inputText+=String.fromCharCode(x);
         }
-        setInput(orig_text);
+        setInput(inputText);
         setToggle(true)
       }
     
       const generateKey = (keyword) => {
       setKeyword(keyword);
       keyword = keyword.split("");
-      if (input.length == keyword.length) setKey(keyword.join(""));
+      if (input.length === keyword.length) setKey(keyword.join(""));
       else {
         let temp = keyword.length;
         for (let i = 0; i < input.length - temp; i++) {

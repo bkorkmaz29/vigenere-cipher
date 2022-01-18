@@ -1,17 +1,10 @@
-import './App.css';
-import TextField from '@mui/material/TextField';
-import Grid from '@mui/material/Grid';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Buttons from './components/Buttons';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
+import AppBar from '@mui/material/AppBar';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { Typography } from '@mui/material';
 
-import { useState } from 'react';
 
 const theme = createTheme({
   typography: {
@@ -24,7 +17,7 @@ const theme = createTheme({
    },
   palette: {
     primary: {
-      main: '#493333',
+      main: '#31A37E',
       contrastText: '#fff',
     },
     secondary: {
@@ -39,12 +32,6 @@ const theme = createTheme({
 });
 
 function App() {
-
- 
-
-  
-
-
   return (
     <ThemeProvider theme={theme}>
       <Header />
