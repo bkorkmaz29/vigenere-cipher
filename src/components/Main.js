@@ -2,6 +2,7 @@ import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Buttons from './Buttons';
+import Footer from './Footer';
 
 import { useState } from 'react';
 
@@ -9,7 +10,7 @@ function Main() {
     const [input, setInput] = useState("")
     const [keyword, setKeyword] = useState("")
     const [key, setKey] = useState("")
-    const [toggle, setToggle] = useState(true)
+
 
     const handleEncrypt = () => {
         let encryptedText="";
@@ -26,7 +27,7 @@ function Main() {
             encryptedText+=String.fromCharCode(x);
         }
         setInput(encryptedText);
-        setToggle(false)
+        
       }
     
       const handleDecrypt = () => {
@@ -40,7 +41,7 @@ function Main() {
             inputText+=String.fromCharCode(x);
         }
         setInput(inputText);
-        setToggle(true)
+        
       }
     
       const generateKey = (keyword) => {
@@ -64,35 +65,33 @@ function Main() {
         sx={{
           m: "auto",
           padding: "10px",
-          mt: "70px",
+          mt: "100px",
           display: "flex",
           flexDirection: 'column',
           height: "70vh"
         }}
         justifyContent="center"
         alignItems="center"
-      
         >
-      
         <Grid
-          id="textBoxes"
+          id="textBox"
           container
-          columnSpacing={8}
           alignItems="center"
           justifyContent="center"
+          width="100"
           padding="auto"
         >
           <Grid item xs={5}>
             <TextField
               multiline
               fullWidth
-              rows={10}
-              id="outlined-basic"
+              rows={15}
+              variant="outlined" 
               value={input}
+              label="Text"
               onChange={(e) => setInput(e.target.value.toUpperCase())}
             />
           </Grid>
-
           <Grid
             item
             container
@@ -104,20 +103,19 @@ function Main() {
           >
             <Grid item xs={12} alignItems="center" justifyContent="center">
               <TextField
-                id="outlined-basic"
+             variant="outlined" 
                 label="Keyword"
-                variant="outlined"
+                value={keyword}
                 onChange={(e) => generateKey(e.target.value.toUpperCase())}
               />
             </Grid>
             <Buttons
-              toggle={toggle}
               handleEncrypt={handleEncrypt}
               handleDecrypt={handleDecrypt}
             />
           </Grid>
-        </Grid>
-       
+        </Grid>  
+        <Footer />
       </Box>
      
     )

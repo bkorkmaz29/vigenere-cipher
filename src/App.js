@@ -1,15 +1,16 @@
 import Header from './components/Header';
 import Main from './components/Main';
-import Footer from './components/Footer';
-import AppBar from '@mui/material/AppBar';
+import About from './components/About';
 
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-
+require('typeface-oxanium');
 
 const theme = createTheme({
   typography: {
     "fontFamily": [
-      'Righteous', 'cursive' ].join(','),
+     'Oxanium', 'cursive' ].join(','),
     "fontSize": 14,
     "fontWeightLight": 300,
     "fontWeightRegular": 400,
@@ -34,9 +35,14 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <Router>
       <Header />
-      <Main />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/About" element={<About />} />
+      </Routes>
+
+      </Router>
     </ThemeProvider>
   );
 }
