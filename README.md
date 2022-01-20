@@ -2,7 +2,7 @@
 
 ## About
 
-A simple app for encrypting and decrypting using Vigenere Cipher. 
+A simple app for encrypting and decrypting with Vigenere Cipher. 
 ## Dependencies
 -   react
 -   material ui
