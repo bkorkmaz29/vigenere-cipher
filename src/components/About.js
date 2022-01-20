@@ -11,26 +11,30 @@ const About = () => {
         mt: "10vh",
         flexDirection: "column",
       }}
-      height={450}
-      width={400}
+      height={500}
+      width={450}
       display="flex"
       justifyItems="center"
       alignItems="center"
-      border={1}
+      border={2}
       p={3}
     >
-      <Typography variant="h4">Vigenere Cipher</Typography>
-
+      <Typography variant="h2">Vigenere Cipher</Typography>
       <Typography variant="h6">
         <br />
         <br />
-        Created by Blaise de Vigenere, a simple cipher that is moderately
-        difficult for any unintended parties to decipher. <br />
+        Created by Blaise de Vigenere in 16th Century,
+        <br />a simple cipher that is moderately difficult for any unintended
+        parties to decipher.
         <br />
-        Your message will be encoded using a keyword, which will determine
-        encryption of the each letter.
+        <br />
+        The message is encrypted using a keyword,
+        <br />
+        which determines the encryption of each letter.
+        <br />
+        The outcome can be decrypted to the original message using the same
+        keyword.
       </Typography>
-
       <Button
         sx={{
           m: "auto",

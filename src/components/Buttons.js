@@ -4,7 +4,6 @@ import Grid from '@mui/material/Grid';
 
 const Buttons = ({handleEncrypt, handleDecrypt}) => {
     return (
-      <Grid item xs={6}>
         <Grid id="buttons" container direction="row" columnSpacing={2}>
           <Grid item xs={6}>
             <Button
@@ -21,7 +20,6 @@ const Buttons = ({handleEncrypt, handleDecrypt}) => {
             </Button>
           </Grid>
         </Grid>
-      </Grid>
     );
 }
 

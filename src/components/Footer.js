@@ -1,16 +1,11 @@
-import { BottomNavigation } from '@mui/material';
-import { BottomNavigationAction } from '@mui/material';
 import { Link } from 'react-router-dom'
+import Button from '@mui/material/Button';
+
 function Footer() {
     return (
-      <BottomNavigation showLabels sx={{ p: "2px", mt: "20px"}}>
-        <BottomNavigationAction
-          component={Link}
-          to="/About"
-          label="What is Vigenere Cipher?"
-          sx={{fontSize: "30px"}}
-        />
-      </BottomNavigation>
+      <Button component={Link} to="/About" variant="text" color="black" sx={{marginTop: "20px"}}>
+        What is the Vigenere Cipher?
+      </Button>
     );
 }
 

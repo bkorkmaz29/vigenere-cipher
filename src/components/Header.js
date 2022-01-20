@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 function Header() {
     return (
       <AppBar>
-        <Typography margin={1} variant="h6">VigCip</Typography>
+        <Typography margin="auto" variant="h6">Vi.Ci</Typography>
       </AppBar>
     );
 }
