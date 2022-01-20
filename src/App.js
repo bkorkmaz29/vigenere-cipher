@@ -2,7 +2,6 @@ import Header from './components/Header';
 import Main from './components/Main';
 import About from './components/About';
 
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 require('typeface-oxanium');
@@ -40,12 +39,11 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/About" element={<About />} />
-      </Routes>
-
+        <Header />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/About" element={<About />} />
+        </Routes>
       </Router>
     </ThemeProvider>
   );
