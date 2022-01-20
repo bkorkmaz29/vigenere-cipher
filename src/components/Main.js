@@ -62,7 +62,7 @@ function Main() {
       <Box
         sx={{
           m: "auto",
-          padding: "10px",
+          padding: "20px",
           mt: "100px",
           display: "flex",
           flexDirection: "column",
@@ -80,7 +80,7 @@ function Main() {
           value={input}
           label="Text"
           onChange={(e) => setInput(e.target.value.toUpperCase())}
-          inputProps={{ maxLength: 199 }}
+          inputProps={{ maxLength: 199, style: {fontSize: 26} }}
         />
         <Grid
           container
