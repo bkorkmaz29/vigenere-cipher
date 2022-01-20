@@ -19,7 +19,7 @@ const About = () => {
       border={2}
       p={3}
     >
-      <Typography variant="h2">Vigenere Cipher</Typography>
+      <Typography variant="h3">Vigenere Cipher</Typography>
       <Typography variant="h6">
         <br />
         <br />

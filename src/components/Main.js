@@ -80,7 +80,7 @@ function Main() {
           value={input}
           label="Text"
           onChange={(e) => setInput(e.target.value.toUpperCase())}
-          inputProps={{ maxLength: 199, style: {fontSize: 26} }}
+          inputProps={{ maxLength: 199, style: {fontSize: 22} }}
         />
         <Grid
           container
