@@ -1,7 +1,7 @@
-import Box from '@mui/material/Box';
+import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
-import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom'
+import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -49,6 +49,6 @@ const About = () => {
       </Button>
     </Box>
   );
-}
+};
 
 export default About;
